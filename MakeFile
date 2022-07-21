@@ -1,0 +1,10 @@
+CXX = g++
+CXXFLAGS = -Wall
+LDLIBS = -lGL -lglut -lGLU
+
+# Criar executaveis a partir de objetos usando compilador de C++
+%: %.o
+	$(CXX) $(LDFLAGS) $@.o $(LOADLIBES) $(LDLIBS) -o $@
+
+clean:
+	rm -f *.o $(BINS)
